@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Исходные файлы\Circle">
+      <UniqueIdentifier>{2096e994-e0ca-4d9b-8838-2f588c39ffb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Point">
+      <UniqueIdentifier>{ba27eefb-69ae-42e7-a8fd-689388c92615}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Rectangle">
+      <UniqueIdentifier>{9ad7e39d-a44f-47db-9f34-0a0f26b7ac26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\ShapeController">
+      <UniqueIdentifier>{adcab5f9-7eac-4a63-b1f1-60e803041d33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Canvas">
+      <UniqueIdentifier>{8d106bd1-a7b9-4840-817d-c760809ff973}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Triangle">
+      <UniqueIdentifier>{230e0eec-db49-45c9-81f1-3a5309b9bb69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\IShape">
+      <UniqueIdentifier>{ebbb0cdd-267f-4f0f-9b0d-41a3c919227b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="CCircle.cpp">
+      <Filter>Исходные файлы\Circle</Filter>
+    </ClCompile>
+    <ClCompile Include="CPoint.cpp">
+      <Filter>Исходные файлы\Point</Filter>
+    </ClCompile>
+    <ClCompile Include="CTriangle.cpp">
+      <Filter>Исходные файлы\Triangle</Filter>
+    </ClCompile>
+    <ClCompile Include="CCanvas.cpp">
+      <Filter>Исходные файлы\Canvas</Filter>
+    </ClCompile>
+    <ClCompile Include="CShapeController.cpp">
+      <Filter>Исходные файлы\ShapeController</Filter>
+    </ClCompile>
+    <ClCompile Include="CRectangle.cpp">
+      <Filter>Исходные файлы\Rectangle</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CCircle.h">
+      <Filter>Исходные файлы\Circle</Filter>
+    </ClInclude>
+    <ClInclude Include="CPoint.h">
+      <Filter>Исходные файлы\Point</Filter>
+    </ClInclude>
+    <ClInclude Include="CTriangle.h">
+      <Filter>Исходные файлы\Triangle</Filter>
+    </ClInclude>
+    <ClInclude Include="CCanvas.h">
+      <Filter>Исходные файлы\Canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="ICanvas.h">
+      <Filter>Исходные файлы\Canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="CShapeController.h">
+      <Filter>Исходные файлы\ShapeController</Filter>
+    </ClInclude>
+    <ClInclude Include="CRectangle.h">
+      <Filter>Исходные файлы\Rectangle</Filter>
+    </ClInclude>
+    <ClInclude Include="IShape.h">
+      <Filter>Исходные файлы\IShape</Filter>
+    </ClInclude>
+    <ClInclude Include="Const.h">
+      <Filter>Исходные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="CShapeDecorator.h">
+      <Filter>Исходные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="ICanvasDrawable.h">
+      <Filter>Исходные файлы\Canvas</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
