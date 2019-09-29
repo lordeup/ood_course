@@ -1,14 +1,11 @@
 #pragma once
-
-#include "CPoint.h"
 #include "Const.h"
-#include "SFML/Graphics.hpp"
-#include "ICanvas.h"
-#include <sstream>
 #include "ICanvasDrawable.h"
+#include "IShape.h"
 
 class CShapeDecorator : public sf::Shape
 	, public ICanvasDrawable
+	, public IShape
 {
 public:
 	CShapeDecorator(sf::Shape& shape)
@@ -28,10 +25,9 @@ public:
 
 	virtual float GetArea() const = 0;
 	virtual float GetPerimeter() const = 0;
-	virtual void PrintInfo(std::ostream& iss) const = 0;
 
 protected:
 	sf::Shape& m_shape;
 };
 
-typedef std::shared_ptr<CShapeDecorator> ShapePtrDecorator;
+typedef std::shared_ptr<CShapeDecorator> ShapePtr;

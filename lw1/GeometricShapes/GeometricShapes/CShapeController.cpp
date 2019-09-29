@@ -30,9 +30,11 @@ std::shared_ptr<CTriangle> CShapeController::CreateTriangle(std::istream& iss)
 	CPoint vertex2(x2, y2);
 	CPoint vertex3(x3, y3);
 
-	sf::ConvexShape triangle;
+	std::vector<CPoint> points = { vertex1, vertex2, vertex3 };
 
-	return std::make_shared<CTriangle>(triangle, vertex1, vertex2, vertex3);
+	sf::ConvexShape triangle(points.size());
+
+	return std::make_shared<CTriangle>(triangle, points);
 }
 
 std::shared_ptr<CCircle> CShapeController::CreateCircle(std::istream& iss)
@@ -57,22 +59,22 @@ void CShapeController::ProcessingCommand()
 
 		std::string figure;
 		iss >> figure;
-		ShapePtrDecorator shapeDecorator;
+		ShapePtr shapeDecorator;
 
 		if (figure == FIGURE_RECTANGLE)
 		{
 			shapeDecorator = CreateRectangle(iss);
-			m_shapeDecorator.push_back(shapeDecorator);
+			m_shape.push_back(shapeDecorator);
 		}
 		else if (figure == FIGURE_TRIANGLE)
 		{
 			shapeDecorator = CreateTriangle(iss);
-			m_shapeDecorator.push_back(shapeDecorator);
+			m_shape.push_back(shapeDecorator);
 		}
 		else if (figure == FIGURE_CIRCLE)
 		{
 			shapeDecorator = CreateCircle(iss);
-			m_shapeDecorator.push_back(shapeDecorator);
+			m_shape.push_back(shapeDecorator);
 		}
 		else
 		{
@@ -83,13 +85,13 @@ void CShapeController::ProcessingCommand()
 
 void CShapeController::PrintShapeInfo()
 {
-	if (m_shapeDecorator.empty())
+	if (m_shape.empty())
 	{
 		m_output << ERROR_EMPTY_INPUT << std::endl;
 	}
 	else
 	{
-		for (auto shape : m_shapeDecorator)
+		for (auto shape : m_shape)
 		{
 			shape->PrintInfo(m_output);
 		}
@@ -98,9 +100,9 @@ void CShapeController::PrintShapeInfo()
 
 void CShapeController::ShapeDisplay()
 {
-	if (!m_shapeDecorator.empty())
+	if (!m_shape.empty())
 	{
 		CCanvas canvas(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_NAME);
-		canvas.DrawingShapes(m_shapeDecorator);
+		canvas.DrawingShapes(m_shape);
 	}
 }

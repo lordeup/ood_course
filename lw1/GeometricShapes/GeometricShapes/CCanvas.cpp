@@ -7,7 +7,7 @@ CCanvas::CCanvas(const unsigned int windowWidth, const unsigned int windowHeight
 {
 }
 
-void CCanvas::DrawingShapes(std::vector<ShapePtrDecorator>& shapes)
+void CCanvas::DrawingShapes(const std::vector<ShapePtr>& shapes)
 {
 	sf::ContextSettings settings;
 	settings.antialiasingLevel = ANTIALIASING_LEVEL;
@@ -36,11 +36,11 @@ void CCanvas::DrawingShapes(std::vector<ShapePtrDecorator>& shapes)
 	}
 }
 
-void CCanvas::DrawCircle(sf::CircleShape circle, const CPoint& center, float radius)
+void CCanvas::DrawCircle(sf::CircleShape circle, const CPoint& center)
 {
 	if (m_window.isOpen())
 	{
-		circle.setPosition(center.GetX() - radius, center.GetY() - radius);
+		circle.setPosition(center.GetX() - circle.getRadius(), center.GetY() - circle.getRadius());
 		circle.setFillColor(BACKGROUND_COLOR_CIRCLE);
 		m_window.draw(circle);
 	}
@@ -64,7 +64,6 @@ void CCanvas::DrawTriangle(sf::ConvexShape triangle, const std::vector<CPoint>& 
 	if (m_window.isOpen())
 	{
 		triangle.setFillColor(BACKGROUND_COLOR_TRIANGLE);
-		triangle.setPointCount(points.size());
 
 		for (size_t i = 0; i < points.size(); ++i)
 		{

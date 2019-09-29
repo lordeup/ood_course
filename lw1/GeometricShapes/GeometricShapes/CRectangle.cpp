@@ -1,6 +1,6 @@
 #include "CRectangle.h"
 
-CRectangle::CRectangle(sf::RectangleShape shape, CPoint& leftTop, CPoint& rightBottom)
+CRectangle::CRectangle(sf::RectangleShape& shape, const CPoint& leftTop, const CPoint& rightBottom)
 	: CShapeDecorator(shape)
 	, m_leftTop(leftTop)
 	, m_rightBottom(rightBottom)

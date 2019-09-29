@@ -4,7 +4,7 @@
 class CTriangle : public CShapeDecorator
 {
 public:
-	CTriangle(sf::ConvexShape shape, CPoint& vertex1, CPoint& vertex2, CPoint& vertex3);
+	CTriangle(sf::ConvexShape& shape, const std::vector<CPoint>& points);
 	~CTriangle() = default;
 
 	float GetArea() const override;
@@ -18,7 +18,5 @@ private:
 
 	float GetSideCounting(const CPoint& firstPoint, const CPoint& secondPoint) const;
 
-	CPoint m_vertex1;
-	CPoint m_vertex2;
-	CPoint m_vertex3;
+	std::vector<CPoint> m_points;
 };

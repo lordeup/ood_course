@@ -7,7 +7,7 @@
 class CCircle : public CShapeDecorator
 {
 public:
-	CCircle(sf::CircleShape shape, CPoint& center);
+	CCircle(sf::CircleShape& shape, const CPoint& center);
 	~CCircle() = default;
 
 	float GetArea() const override;

@@ -1,6 +1,6 @@
 #include "CCircle.h"
 
-CCircle::CCircle(sf::CircleShape shape, CPoint& center)
+CCircle::CCircle(sf::CircleShape& shape, const CPoint& center)
 	: CShapeDecorator(shape)
 	, m_center(center)
 {
@@ -24,5 +24,5 @@ void CCircle::PrintInfo(std::ostream& iss) const
 
 void CCircle::Draw(ICanvas& canvas) const
 {
-	canvas.DrawCircle(m_circle, m_center, m_circle.getRadius());
+	canvas.DrawCircle(m_circle, m_center);
 }

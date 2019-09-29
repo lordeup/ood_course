@@ -3,7 +3,6 @@
 #include "CCircle.h"
 #include "CRectangle.h"
 #include "CTriangle.h"
-#include "CShapeDecorator.h"
 
 class CShapeController
 {
@@ -23,5 +22,5 @@ private:
 	std::istream& m_input;
 	std::ostream& m_output;
 
-	std::vector<ShapePtrDecorator> m_shapeDecorator;
+	std::vector<ShapePtr> m_shape;
 };

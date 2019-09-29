@@ -4,7 +4,7 @@
 class CRectangle : public CShapeDecorator
 {
 public:
-	CRectangle(sf::RectangleShape shape, CPoint& leftTop, CPoint& rightBottom);
+	CRectangle(sf::RectangleShape& shape, const CPoint& leftTop, const CPoint& rightBottom);
 	~CRectangle() = default;
 
 	float GetArea() const override;
