@@ -1,10 +1,12 @@
 #pragma once
+#include "Const.h"
 #include "ICanvas.h"
 #include "ICanvasDrawable.h"
+#include "ICanvasShape.h"
 #include <sstream>
-#include <string>
 
-class IShape : public ICanvasDrawable
+class IShape : public ICanvasShape
+	, public ICanvasDrawable
 {
 public:
 	IShape() = default;
@@ -14,3 +16,5 @@ public:
 	virtual float GetPerimeter() const = 0;
 	virtual void PrintInfo(std::ostream& iss) const = 0;
 };
+
+typedef std::shared_ptr<IShape> ShapePtr;

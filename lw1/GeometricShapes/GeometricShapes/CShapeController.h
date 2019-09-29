@@ -1,11 +1,9 @@
 #pragma once
 #include "CCanvas.h"
 #include "CCircle.h"
-#include "CPoint.h"
 #include "CRectangle.h"
 #include "CTriangle.h"
-#include "IShape.h"
-#include <vector>
+#include "CShapeDecorator.h"
 
 class CShapeController
 {
@@ -25,5 +23,5 @@ private:
 	std::istream& m_input;
 	std::ostream& m_output;
 
-	std::vector<std::shared_ptr<IShape>> m_shape;
+	std::vector<ShapePtrDecorator> m_shapeDecorator;
 };

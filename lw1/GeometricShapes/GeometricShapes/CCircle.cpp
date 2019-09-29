@@ -1,19 +1,20 @@
 #include "CCircle.h"
 
-CCircle::CCircle(CPoint& center, const float radius)
-	: m_center(center)
-	, m_radius(radius)
+CCircle::CCircle(sf::CircleShape shape, CPoint& center)
+	: CShapeDecorator(shape)
+	, m_center(center)
 {
+	m_circle = shape;
 }
 
 float CCircle::GetArea() const
 {
-	return float(M_PI * m_radius * m_radius);
+	return float(M_PI * m_circle.getRadius() * m_circle.getRadius());
 }
 
 float CCircle::GetPerimeter() const
 {
-	return float(M_PI * MULTIPLICATION_FACTOR * m_radius);
+	return float(M_PI * MULTIPLICATION_FACTOR * m_circle.getRadius());
 }
 
 void CCircle::PrintInfo(std::ostream& iss) const
@@ -23,5 +24,5 @@ void CCircle::PrintInfo(std::ostream& iss) const
 
 void CCircle::Draw(ICanvas& canvas) const
 {
-	canvas.DrawCircle(m_center, m_radius);
+	canvas.DrawCircle(m_circle, m_center, m_circle.getRadius());
 }

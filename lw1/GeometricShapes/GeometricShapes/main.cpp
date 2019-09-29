@@ -1,11 +1,10 @@
 ﻿#include "CShapeController.h"
-#include "Const.h"
 #include <fstream>
 #include <iostream>
 
 int main()
 {
-	std::ifstream fileInput("input.txt");
+	std::ifstream fileInput(INPUT_FILE_NAME);
 
 	if (!fileInput.is_open())
 	{

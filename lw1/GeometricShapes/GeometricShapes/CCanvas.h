@@ -1,8 +1,7 @@
 #pragma once
+#include "CShapeDecorator.h"
 #include "Const.h"
 #include "ICanvas.h"
-#include "IShape.h"
-#include "SFML/Graphics.hpp"
 
 const sf::Color BACKGROUND_COLOR_RECTANGLE = sf::Color::Red;
 const sf::Color BACKGROUND_COLOR_TRIANGLE = sf::Color::Yellow;
@@ -14,10 +13,10 @@ public:
 	CCanvas(const unsigned int windowWidth, const unsigned int windowHeight, const std::string name);
 	~CCanvas() = default;
 
-	void DrawingShapes(std::vector<std::shared_ptr<IShape>>& shapes);
-	void DrawCircle(const CPoint& center, float radius) override;
-	void DrawRectangle(const CPoint& leftTop, float width, float height) override;
-	void DrawTriangle(const std::vector<CPoint>& points) override;
+	void DrawingShapes(std::vector<ShapePtrDecorator>& shapes);
+	void DrawCircle(sf::CircleShape circle, const CPoint& center, float radius) override;
+	void DrawRectangle(sf::RectangleShape rectangle, float width, float height) override;
+	void DrawTriangle(sf::ConvexShape triangle, const std::vector<CPoint>& points) override;
 
 private:
 	sf::RenderWindow m_window;

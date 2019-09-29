@@ -1,5 +1,4 @@
 #pragma once
-#include <sstream>
 #include <string>
 
 const int POWER_NUMBER = 2;
@@ -15,6 +14,7 @@ const std::string ERROR_FILE_NOT_EXIST = "This file does not exist";
 const std::string ERROR_NOT_ENOUGH_ARGUMENTS = "The number of arguments does not match the task condition\n"
 											   "Input should look: GeometricShapes.exe <input file>\n";
 const std::string ERROR_EMPTY_INPUT = "You have not created a shape";
+const std::string INPUT_FILE_NAME = "input.txt";
 
 const std::string FIGURE_RECTANGLE = "RECTANGLE";
 const std::string FIGURE_TRIANGLE = "TRIANGLE";

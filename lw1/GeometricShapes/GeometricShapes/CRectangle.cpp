@@ -1,10 +1,31 @@
 #include "CRectangle.h"
 
-CRectangle::CRectangle(CPoint& leftTop, const float width, const float height)
-	: m_leftTop(leftTop)
-	, m_width(width)
-	, m_height(height)
+CRectangle::CRectangle(sf::RectangleShape shape, CPoint& leftTop, CPoint& rightBottom)
+	: CShapeDecorator(shape)
+	, m_leftTop(leftTop)
+	, m_rightBottom(rightBottom)
 {
+	m_rectangle = shape;
+}
+
+float CRectangle::GetArea() const
+{
+	return GetWidth() * GetHeight();
+}
+
+float CRectangle::GetPerimeter() const
+{
+	return (GetWidth() + GetHeight()) * MULTIPLICATION_FACTOR;
+}
+
+float CRectangle::GetWidth() const
+{
+	return std::abs(m_leftTop.GetX() - m_rightBottom.GetX());
+}
+
+float CRectangle::GetHeight() const
+{
+	return std::abs(m_leftTop.GetY() - m_rightBottom.GetY());
 }
 
 void CRectangle::PrintInfo(std::ostream& iss) const
@@ -12,22 +33,7 @@ void CRectangle::PrintInfo(std::ostream& iss) const
 	iss << FIGURE_RECTANGLE << COLON << PERIMETER_SHAPE << GetPerimeter() << SEMICOLON << AREA_SHAPE << GetArea() << std::endl;
 }
 
-float CRectangle::GetArea() const
-{
-	return m_width * m_height;
-}
-
-float CRectangle::GetPerimeter() const
-{
-	return (m_width + m_height) * MULTIPLICATION_FACTOR;
-}
-
-CPoint CRectangle::GetRightBottom() const
-{
-	return CPoint(m_leftTop.GetX() + m_width, m_leftTop.GetY() + m_height);
-}
-
 void CRectangle::Draw(ICanvas& canvas) const
 {
-	canvas.DrawRectangle(m_leftTop, m_width, m_height);
+	canvas.DrawRectangle(m_rectangle, GetWidth(), GetHeight());
 }

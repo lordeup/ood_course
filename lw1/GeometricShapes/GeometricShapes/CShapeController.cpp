@@ -8,13 +8,16 @@ CShapeController::CShapeController(std::istream& input, std::ostream& output)
 
 std::shared_ptr<CRectangle> CShapeController::CreateRectangle(std::istream& iss)
 {
-	float x, y, width, height;
+	float x1, y1, x2, y2;
 
-	iss >> x >> y >> width >> height;
+	iss >> x1 >> y1 >> x2 >> y2;
 
-	CPoint leftTop(x, y);
+	CPoint leftTop(x1, y1);
+	CPoint rightBottom(x2, y2);
 
-	return std::make_shared<CRectangle>(leftTop, width, height);
+	sf::RectangleShape rectangle;
+
+	return std::make_shared<CRectangle>(rectangle, leftTop, rightBottom);
 }
 
 std::shared_ptr<CTriangle> CShapeController::CreateTriangle(std::istream& iss)
@@ -27,7 +30,9 @@ std::shared_ptr<CTriangle> CShapeController::CreateTriangle(std::istream& iss)
 	CPoint vertex2(x2, y2);
 	CPoint vertex3(x3, y3);
 
-	return std::make_shared<CTriangle>(vertex1, vertex2, vertex3);
+	sf::ConvexShape triangle;
+
+	return std::make_shared<CTriangle>(triangle, vertex1, vertex2, vertex3);
 }
 
 std::shared_ptr<CCircle> CShapeController::CreateCircle(std::istream& iss)
@@ -37,8 +42,9 @@ std::shared_ptr<CCircle> CShapeController::CreateCircle(std::istream& iss)
 	iss >> x >> y >> radius;
 
 	CPoint center(x, y);
+	sf::CircleShape circle(radius);
 
-	return std::make_shared<CCircle>(center, radius);
+	return std::make_shared<CCircle>(circle, center);
 }
 
 void CShapeController::ProcessingCommand()
@@ -51,22 +57,22 @@ void CShapeController::ProcessingCommand()
 
 		std::string figure;
 		iss >> figure;
-		std::shared_ptr<IShape> shape;
+		ShapePtrDecorator shapeDecorator;
 
 		if (figure == FIGURE_RECTANGLE)
 		{
-			shape = CreateRectangle(iss);
-			m_shape.push_back(shape);
+			shapeDecorator = CreateRectangle(iss);
+			m_shapeDecorator.push_back(shapeDecorator);
 		}
 		else if (figure == FIGURE_TRIANGLE)
 		{
-			shape = CreateTriangle(iss);
-			m_shape.push_back(shape);
+			shapeDecorator = CreateTriangle(iss);
+			m_shapeDecorator.push_back(shapeDecorator);
 		}
 		else if (figure == FIGURE_CIRCLE)
 		{
-			shape = CreateCircle(iss);
-			m_shape.push_back(shape);
+			shapeDecorator = CreateCircle(iss);
+			m_shapeDecorator.push_back(shapeDecorator);
 		}
 		else
 		{
@@ -77,13 +83,13 @@ void CShapeController::ProcessingCommand()
 
 void CShapeController::PrintShapeInfo()
 {
-	if (m_shape.empty())
+	if (m_shapeDecorator.empty())
 	{
 		m_output << ERROR_EMPTY_INPUT << std::endl;
 	}
 	else
 	{
-		for (auto shape : m_shape)
+		for (auto shape : m_shapeDecorator)
 		{
 			shape->PrintInfo(m_output);
 		}
@@ -92,9 +98,9 @@ void CShapeController::PrintShapeInfo()
 
 void CShapeController::ShapeDisplay()
 {
-	if (!m_shape.empty())
+	if (!m_shapeDecorator.empty())
 	{
 		CCanvas canvas(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_NAME);
-		canvas.DrawingShapes(m_shape);
+		canvas.DrawingShapes(m_shapeDecorator);
 	}
 }

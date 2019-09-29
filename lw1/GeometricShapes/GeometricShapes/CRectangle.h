@@ -1,24 +1,24 @@
 #pragma once
-#include "CPoint.h"
-#include "Const.h"
-#include "IShape.h"
+#include "CShapeDecorator.h"
 
-class CRectangle : public IShape
+class CRectangle : public CShapeDecorator
 {
 public:
-	CRectangle(CPoint& leftTop, const float width, const float height);
+	CRectangle(sf::RectangleShape shape, CPoint& leftTop, CPoint& rightBottom);
 	~CRectangle() = default;
 
 	float GetArea() const override;
 	float GetPerimeter() const override;
+
+	float GetWidth() const;
+	float GetHeight() const;
+
 	void PrintInfo(std::ostream& iss) const override;
 	void Draw(ICanvas& canvas) const override;
 
-	CPoint GetRightBottom() const;
-
 private:
-	float m_width;
-	float m_height;
+	sf::RectangleShape m_rectangle;
 
 	CPoint m_leftTop;
+	CPoint m_rightBottom;
 };

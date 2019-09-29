@@ -30,6 +30,9 @@
     <Filter Include="Исходные файлы\IShape">
       <UniqueIdentifier>{ebbb0cdd-267f-4f0f-9b0d-41a3c919227b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\CShapeDecorator">
+      <UniqueIdentifier>{aa184fae-fe46-49ae-9667-4a7a330d18a5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -82,11 +85,11 @@
     <ClInclude Include="Const.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="CShapeDecorator.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
     <ClInclude Include="ICanvasDrawable.h">
       <Filter>Исходные файлы\Canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="CShapeDecorator.h">
+      <Filter>Исходные файлы\CShapeDecorator</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
