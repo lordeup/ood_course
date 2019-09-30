@@ -30,4 +30,4 @@ protected:
 	sf::Shape& m_shape;
 };
 
-typedef std::shared_ptr<CShapeDecorator> ShapePtr;
+using ShapePtr = std::shared_ptr<CShapeDecorator>;
