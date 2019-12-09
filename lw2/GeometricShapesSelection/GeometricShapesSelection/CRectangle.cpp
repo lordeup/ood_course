@@ -1,11 +1,13 @@
 #include "CRectangle.h"
 
-CRectangle::CRectangle(sf::RectangleShape& shape, const CPoint& leftTop, const CPoint& rightBottom)
+CRectangle::CRectangle(sf::RectangleShape& shape, const sf::Vector2f& leftTop, const sf::Vector2f& rightBottom)
 	: CShapeDecorator(shape)
 	, m_leftTop(leftTop)
 	, m_rightBottom(rightBottom)
+	, m_rectangle(shape)
 {
-	m_rectangle = shape;
+	m_leftTopDraw = { GetWidth() / MULTIPLICATION_FACTOR, GetHeight() / MULTIPLICATION_FACTOR };
+	m_prevPosition = { 0.f, 0.f };
 }
 
 float CRectangle::GetArea() const
@@ -20,12 +22,12 @@ float CRectangle::GetPerimeter() const
 
 float CRectangle::GetWidth() const
 {
-	return std::abs(m_leftTop.GetX() - m_rightBottom.GetX());
+	return std::abs(m_leftTop.x - m_rightBottom.x);
 }
 
 float CRectangle::GetHeight() const
 {
-	return std::abs(m_leftTop.GetY() - m_rightBottom.GetY());
+	return std::abs(m_leftTop.y - m_rightBottom.y);
 }
 
 void CRectangle::PrintInfo(std::ostream& iss) const
@@ -33,7 +35,42 @@ void CRectangle::PrintInfo(std::ostream& iss) const
 	iss << FIGURE_RECTANGLE << COLON << PERIMETER_SHAPE << GetPerimeter() << SEMICOLON << AREA_SHAPE << GetArea() << std::endl;
 }
 
-void CRectangle::Draw(ICanvas& canvas) const
+void CRectangle::Draw(ICanvas& canvas)
 {
 	canvas.DrawRectangle(m_rectangle, GetWidth(), GetHeight());
+}
+
+void CRectangle::DrawFrame(ICanvas& canvas)
+{
+	m_rectangle.setOutlineThickness(OUTLINE_THICKNESS);
+	m_rectangle.setOutlineColor(BACKGROUND_COLOR_DRAW);
+}
+
+void CRectangle::DeleteFrame(ICanvas& canvas)
+{
+	m_rectangle.setOutlineColor(BACKGROUND_COLOR_RECTANGLE);
+}
+
+void CRectangle::Move(ICanvas& canvas, const sf::Vector2f& position)
+{
+	MoveComposite(position);
+}
+
+bool CRectangle::IsCheckSide(const sf::Vector2f& position)
+{
+	sf::Vector2f rightBottom = { GetWidth() + m_rectangle.getPosition().x, GetHeight() + m_rectangle.getPosition().y };
+
+	if (position.x >= m_rectangle.getPosition().x && position.x <= rightBottom.x && position.y >= m_rectangle.getPosition().y && position.y <= rightBottom.y)
+	{
+		return true;
+	}
+
+	return false;
+}
+
+void CRectangle::MoveComposite(const sf::Vector2f& position)
+{
+	sf::Vector2f result = position - m_prevPosition;
+	m_prevPosition = position;
+	m_rectangle.move(result);
 }

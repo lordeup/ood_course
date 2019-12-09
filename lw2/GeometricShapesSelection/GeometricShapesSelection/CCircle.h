@@ -7,17 +7,25 @@
 class CCircle : public CShapeDecorator
 {
 public:
-	CCircle(sf::CircleShape& shape, const CPoint& center);
+	CCircle(sf::CircleShape& shape, const sf::Vector2f& center);
 	~CCircle() = default;
 
 	float GetArea() const override;
 	float GetPerimeter() const override;
 
 	void PrintInfo(std::ostream& iss) const override;
-	void Draw(ICanvas& canvas) const override;
+	void Draw(ICanvas& canvas) override;
+	void DrawFrame(ICanvas& canvas) override;
+	void DeleteFrame(ICanvas& canvas) override;
+	void Move(ICanvas& canvas, const sf::Vector2f& position) override;
+
+	bool IsCheckSide(const sf::Vector2f& position) override;
+
+	void MoveComposite(const sf::Vector2f& position) override;
 
 private:
 	sf::CircleShape m_circle;
 
-	CPoint m_center;
+	sf::Vector2f m_prevPosition;
+	sf::Vector2f m_center;
 };

@@ -12,8 +12,8 @@ std::shared_ptr<CRectangle> CShapeController::CreateRectangle(std::istream& iss)
 
 	iss >> x1 >> y1 >> x2 >> y2;
 
-	CPoint leftTop(x1, y1);
-	CPoint rightBottom(x2, y2);
+	sf::Vector2f leftTop(x1, y1);
+	sf::Vector2f rightBottom(x2, y2);
 
 	sf::RectangleShape rectangle;
 
@@ -26,11 +26,11 @@ std::shared_ptr<CTriangle> CShapeController::CreateTriangle(std::istream& iss)
 
 	iss >> x1 >> y1 >> x2 >> y2 >> x3 >> y3;
 
-	CPoint vertex1(x1, y1);
-	CPoint vertex2(x2, y2);
-	CPoint vertex3(x3, y3);
+	sf::Vector2f vertex1(x1, y1);
+	sf::Vector2f vertex2(x2, y2);
+	sf::Vector2f vertex3(x3, y3);
 
-	std::vector<CPoint> points = { vertex1, vertex2, vertex3 };
+	std::vector<sf::Vector2f> points = { vertex1, vertex2, vertex3 };
 
 	sf::ConvexShape triangle(points.size());
 
@@ -43,7 +43,7 @@ std::shared_ptr<CCircle> CShapeController::CreateCircle(std::istream& iss)
 
 	iss >> x >> y >> radius;
 
-	CPoint center(x, y);
+	sf::Vector2f center(x, y);
 	sf::CircleShape circle(radius);
 
 	return std::make_shared<CCircle>(circle, center);
@@ -102,7 +102,7 @@ void CShapeController::ShapeDisplay()
 {
 	if (!m_shape.empty())
 	{
-		CCanvas canvas(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_NAME);
-		canvas.DrawingShapes(m_shape);
+		CCanvas canvas(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_NAME, m_shape);
+		canvas.DrawingShapes();
 	}
 }

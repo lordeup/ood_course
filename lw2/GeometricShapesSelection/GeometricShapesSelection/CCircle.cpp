@@ -1,10 +1,11 @@
 #include "CCircle.h"
 
-CCircle::CCircle(sf::CircleShape& shape, const CPoint& center)
+CCircle::CCircle(sf::CircleShape& shape, const sf::Vector2f& center)
 	: CShapeDecorator(shape)
 	, m_center(center)
+	, m_circle(shape)
 {
-	m_circle = shape;
+	m_prevPosition = { 0.f, 0.f };
 }
 
 float CCircle::GetArea() const
@@ -22,7 +23,42 @@ void CCircle::PrintInfo(std::ostream& iss) const
 	iss << FIGURE_CIRCLE << COLON << PERIMETER_SHAPE << GetPerimeter() << SEMICOLON << AREA_SHAPE << GetArea() << std::endl;
 }
 
-void CCircle::Draw(ICanvas& canvas) const
+void CCircle::Draw(ICanvas& canvas)
 {
-	canvas.DrawCircle(m_circle, m_center);
+	canvas.DrawCircle(m_circle);
+}
+
+void CCircle::DrawFrame(ICanvas& canvas)
+{
+	m_circle.setOutlineThickness(OUTLINE_THICKNESS);
+	m_circle.setOutlineColor(BACKGROUND_COLOR_DRAW);
+}
+
+void CCircle::DeleteFrame(ICanvas& canvas)
+{
+	m_circle.setOutlineColor(BACKGROUND_COLOR_CIRCLE);
+}
+
+void CCircle::Move(ICanvas& canvas, const sf::Vector2f& position)
+{
+	MoveComposite(position);
+}
+
+bool CCircle::IsCheckSide(const sf::Vector2f& position)
+{
+	sf::Vector2f resultPosition = { position - m_circle.getPosition() };
+
+	if (sqrt(pow(resultPosition.x - m_circle.getRadius(), POWER_NUMBER) + pow(resultPosition.y - m_circle.getRadius(), POWER_NUMBER)) <= m_circle.getRadius())
+	{
+		return true;
+	}
+
+	return false;
+}
+
+void CCircle::MoveComposite(const sf::Vector2f& position)
+{
+	sf::Vector2f result = position - m_prevPosition;
+	m_prevPosition = position;
+	m_circle.move(result);
 }

@@ -4,7 +4,7 @@
 class CRectangle : public CShapeDecorator
 {
 public:
-	CRectangle(sf::RectangleShape& shape, const CPoint& leftTop, const CPoint& rightBottom);
+	CRectangle(sf::RectangleShape& shape, const sf::Vector2f& leftTop, const sf::Vector2f& rightBottom);
 	~CRectangle() = default;
 
 	float GetArea() const override;
@@ -14,11 +14,19 @@ public:
 	float GetHeight() const;
 
 	void PrintInfo(std::ostream& iss) const override;
-	void Draw(ICanvas& canvas) const override;
+	void Draw(ICanvas& canvas) override;
+	void DrawFrame(ICanvas& canvas) override;
+	void DeleteFrame(ICanvas& canvas) override;
+	void Move(ICanvas& canvas, const sf::Vector2f& position) override;
+	bool IsCheckSide(const sf::Vector2f& position) override;
+
+	void MoveComposite(const sf::Vector2f& position) override;
 
 private:
 	sf::RectangleShape m_rectangle;
 
-	CPoint m_leftTop;
-	CPoint m_rightBottom;
+	sf::Vector2f m_prevPosition;
+
+	sf::Vector2f m_leftTop, m_leftTopDraw;
+	sf::Vector2f m_rightBottom;
 };

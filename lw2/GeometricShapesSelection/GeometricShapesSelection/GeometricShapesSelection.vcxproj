@@ -21,8 +21,9 @@
   <ItemGroup>
     <ClInclude Include="CCanvas.h" />
     <ClInclude Include="CCircle.h" />
+    <ClInclude Include="CComposite.h" />
+    <ClInclude Include="IComponent.h" />
     <ClInclude Include="Const.h" />
-    <ClInclude Include="CPoint.h" />
     <ClInclude Include="CRectangle.h" />
     <ClInclude Include="CShapeController.h" />
     <ClInclude Include="CShapeDecorator.h" />
@@ -34,7 +35,7 @@
   <ItemGroup>
     <ClCompile Include="CCanvas.cpp" />
     <ClCompile Include="CCircle.cpp" />
-    <ClCompile Include="CPoint.cpp" />
+    <ClCompile Include="CComposite.cpp" />
     <ClCompile Include="CRectangle.cpp" />
     <ClCompile Include="CShapeController.cpp" />
     <ClCompile Include="CTriangle.cpp" />

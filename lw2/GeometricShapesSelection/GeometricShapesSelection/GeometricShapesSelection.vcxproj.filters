@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Исходные файлы\CRectangle">
-      <UniqueIdentifier>{74a11953-90be-44e6-9fe8-5780affbe21b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Исходные файлы\CCircle">
       <UniqueIdentifier>{b8a1e9c2-a458-4da6-94f5-be4e8789da06}</UniqueIdentifier>
     </Filter>
@@ -34,19 +31,16 @@
     <Filter Include="Исходные файлы\IShape">
       <UniqueIdentifier>{529bb96c-5a28-428d-a08d-cd99b8f3778c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Исходные файлы\CPoint">
-      <UniqueIdentifier>{a99eb81a-1d91-4f6d-a016-80ea24732a7f}</UniqueIdentifier>
+    <Filter Include="Исходные файлы\CRectangle">
+      <UniqueIdentifier>{21408fe0-f01c-4ff9-94cf-0ca2a8d11cb1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Composite">
+      <UniqueIdentifier>{76f5a48b-ddef-4496-a804-3161644f2706}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Const.h">
       <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="CPoint.h">
-      <Filter>Исходные файлы\CPoint</Filter>
-    </ClInclude>
-    <ClInclude Include="CRectangle.h">
-      <Filter>Исходные файлы\CRectangle</Filter>
     </ClInclude>
     <ClInclude Include="CCircle.h">
       <Filter>Исходные файлы\CCircle</Filter>
@@ -72,14 +66,17 @@
     <ClInclude Include="IShape.h">
       <Filter>Исходные файлы\IShape</Filter>
     </ClInclude>
+    <ClInclude Include="CRectangle.h">
+      <Filter>Исходные файлы\CRectangle</Filter>
+    </ClInclude>
+    <ClInclude Include="CComposite.h">
+      <Filter>Исходные файлы\Composite</Filter>
+    </ClInclude>
+    <ClInclude Include="IComponent.h">
+      <Filter>Исходные файлы\Composite</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CPoint.cpp">
-      <Filter>Исходные файлы\CPoint</Filter>
-    </ClCompile>
-    <ClCompile Include="CRectangle.cpp">
-      <Filter>Исходные файлы\CRectangle</Filter>
-    </ClCompile>
     <ClCompile Include="CCircle.cpp">
       <Filter>Исходные файлы\CCircle</Filter>
     </ClCompile>
@@ -94,6 +91,12 @@
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="CRectangle.cpp">
+      <Filter>Исходные файлы\CRectangle</Filter>
+    </ClCompile>
+    <ClCompile Include="CComposite.cpp">
+      <Filter>Исходные файлы\Composite</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

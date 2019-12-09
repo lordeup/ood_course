@@ -1,27 +1,35 @@
 #pragma once
 #include "CShapeDecorator.h"
 #include "Const.h"
-
-const sf::Color BACKGROUND_COLOR_RECTANGLE = sf::Color::Red;
-const sf::Color BACKGROUND_COLOR_TRIANGLE = sf::Color::Yellow;
-const sf::Color BACKGROUND_COLOR_CIRCLE = sf::Color::Green;
+#include <algorithm>
 
 class CCanvas : public ICanvas
 {
 public:
-	CCanvas(const unsigned int windowWidth, const unsigned int windowHeight, const std::string name);
+	CCanvas(const unsigned int windowWidth, const unsigned int windowHeight, const std::string name, const std::vector<ShapePtr>& shapes);
 	~CCanvas() = default;
 
-	void DrawingShapes(const std::vector<ShapePtr>& shapes);
-	void DrawCircle(sf::CircleShape circle, const CPoint& center) override;
+	void DrawingShapes();
+	void DrawCircle(sf::CircleShape circle) override;
 	void DrawRectangle(sf::RectangleShape rectangle, float width, float height) override;
-	void DrawTriangle(sf::ConvexShape triangle, const std::vector<CPoint>& points) override;
+	void DrawTriangle(sf::ConvexShape triangle, const std::vector<sf::Vector2f>& points) override;
 
 private:
 	sf::RenderWindow m_window;
 
-	unsigned int m_windowWidth;
-	unsigned int m_windowHeight;
+	bool m_isPressed = false;
+	bool m_isGrouping = false;
+
+	unsigned int m_windowWidth, m_windowHeight;
+	std::vector<ShapePtr> m_shapes;
+	std::vector<ShapePtr> m_shapeSelected;
 
 	std::string m_windowName;
+
+	void EventHandler(sf::Event& event, CComposite& composite);
+	void Frame(const sf::Vector2f& position);
+	void FrameSelected(const sf::Vector2f& position);
+	void DeleteFrame(const sf::Vector2f& position);
+	void MoveShape(const sf::Vector2f& position);
+	bool IsFrameCheck(const sf::Vector2f& position);
 };
