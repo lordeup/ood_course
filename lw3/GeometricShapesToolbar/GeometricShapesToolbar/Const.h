@@ -1,9 +1,10 @@
 #pragma once
+#include <algorithm>
+#include <sstream>
 #include <string>
 
 const int POWER_NUMBER = 2;
 const int MULTIPLICATION_FACTOR = 2;
-const float OUTLINE_THICKNESS = 2.f;
 
 const unsigned int WINDOW_WIDTH = 1200;
 const unsigned int WINDOW_HEIGHT = 800;

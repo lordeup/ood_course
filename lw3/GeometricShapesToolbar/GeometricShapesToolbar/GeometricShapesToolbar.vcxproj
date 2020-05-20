@@ -78,6 +78,7 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>C:\SFML-2.5.1\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>SFML_DYNAMIC</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -93,6 +94,7 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>C:\SFML-2.5.1\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>SFML_DYNAMIC</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -104,12 +106,12 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>C:\SFML-2.5.1\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>SFML_DYNAMIC</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -123,12 +125,12 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>C:\SFML-2.5.1\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>SFML_DYNAMIC</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,44 +141,58 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CAddState.cpp" />
-    <ClCompile Include="CCanvas.cpp" />
-    <ClCompile Include="CCircle.cpp" />
-    <ClCompile Include="CComposite.cpp" />
-    <ClCompile Include="CContextState.cpp" />
-    <ClCompile Include="CFillState.cpp" />
-    <ClCompile Include="CInvoker.cpp" />
-    <ClCompile Include="CMoveState.cpp" />
-    <ClCompile Include="CRectangle.cpp" />
-    <ClCompile Include="CRectangleMini.cpp" />
-    <ClCompile Include="CShapeHandler.cpp" />
-    <ClCompile Include="CToolbar.cpp" />
-    <ClCompile Include="CTriangle.cpp" />
+    <ClCompile Include="Canvas\CCanvas.cpp" />
+    <ClCompile Include="Commands\CFillGreenCommand.cpp" />
+    <ClCompile Include="Commands\CFillRedCommand.cpp" />
+    <ClCompile Include="Commands\CFillYellowCommand.cpp" />
+    <ClCompile Include="Commands\CInvoker.cpp" />
+    <ClCompile Include="Commands\COutlineColorBlueCommand.cpp" />
+    <ClCompile Include="Commands\COutlineColorCyanCommand.cpp" />
+    <ClCompile Include="Commands\COutlineColorMagentaCommand.cpp" />
+    <ClCompile Include="Commands\COutlineThicknessOneCommand.cpp" />
+    <ClCompile Include="Commands\COutlineThicknessTwoCommand.cpp" />
+    <ClCompile Include="Composite\CComposite.cpp" />
+    <ClCompile Include="Handler\CShapeHandler.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Shape\CCircle.cpp" />
+    <ClCompile Include="Shape\CRectangle.cpp" />
+    <ClCompile Include="Shape\CTriangle.cpp" />
+    <ClCompile Include="States\CAddState.cpp" />
+    <ClCompile Include="States\CDragState.cpp" />
+    <ClCompile Include="States\CFillState.cpp" />
+    <ClCompile Include="States\CStateContext.cpp" />
+    <ClCompile Include="Toolbar\CToolbar.cpp" />
+    <ClCompile Include="Utils\Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CAddState.h" />
-    <ClInclude Include="CCanvas.h" />
-    <ClInclude Include="CCircle.h" />
-    <ClInclude Include="CContextState.h" />
-    <ClInclude Include="CFillState.h" />
-    <ClInclude Include="CMoveState.h" />
-    <ClInclude Include="CRectangleMini.h" />
-    <ClInclude Include="CToolbar.h" />
-    <ClInclude Include="ICommand.h" />
-    <ClInclude Include="CComposite.h" />
-    <ClInclude Include="CInvoker.h" />
+    <ClInclude Include="Canvas\CCanvas.h" />
+    <ClInclude Include="Canvas\ICanvasDrawable.h" />
+    <ClInclude Include="Colors.h" />
+    <ClInclude Include="Commands\CFillGreenCommand.h" />
+    <ClInclude Include="Commands\CFillRedCommand.h" />
+    <ClInclude Include="Commands\CFillYellowCommand.h" />
+    <ClInclude Include="Commands\CInvoker.h" />
+    <ClInclude Include="Commands\COutlineColorBlueCommand.h" />
+    <ClInclude Include="Commands\COutlineColorCyanCommand.h" />
+    <ClInclude Include="Commands\COutlineColorMagentaCommand.h" />
+    <ClInclude Include="Commands\COutlineThicknessOneCommand.h" />
+    <ClInclude Include="Commands\COutlineThicknessTwoCommand.h" />
+    <ClInclude Include="Commands\ICommand.h" />
+    <ClInclude Include="Composite\CComposite.h" />
+    <ClInclude Include="Decorator\CShapeDecorator.h" />
+    <ClInclude Include="Handler\CShapeHandler.h" />
     <ClInclude Include="Const.h" />
-    <ClInclude Include="CRectangle.h" />
-    <ClInclude Include="CShapeHandler.h" />
-    <ClInclude Include="CShapeDecorator.h" />
-    <ClInclude Include="CTriangle.h" />
-    <ClInclude Include="ICanvas.h" />
-    <ClInclude Include="ICanvasDrawable.h" />
-    <ClInclude Include="IComponent.h" />
-    <ClInclude Include="IContext.h" />
-    <ClInclude Include="IShape.h" />
-    <ClInclude Include="IState.h" />
+    <ClInclude Include="Shape\CCircle.h" />
+    <ClInclude Include="Shape\CRectangle.h" />
+    <ClInclude Include="Shape\CTriangle.h" />
+    <ClInclude Include="Shape\IShape.h" />
+    <ClInclude Include="States\CAddState.h" />
+    <ClInclude Include="States\CStateContext.h" />
+    <ClInclude Include="States\CDragState.h" />
+    <ClInclude Include="States\CFillState.h" />
+    <ClInclude Include="States\IState.h" />
+    <ClInclude Include="Toolbar\CToolbar.h" />
+    <ClInclude Include="Utils\Utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

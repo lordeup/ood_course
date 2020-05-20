@@ -19,168 +19,204 @@
     <Filter Include="Исходные файлы\Shape">
       <UniqueIdentifier>{19814f93-42ef-48d9-9e02-3782610e86b6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Исходные файлы\Command">
-      <UniqueIdentifier>{b3373bde-5cdd-4fda-a7ea-e3bf25b889e6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Исходные файлы\State">
-      <UniqueIdentifier>{6ca674d3-2b24-4abe-ad2b-3c25c2c73411}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Исходные файлы\State\Context">
-      <UniqueIdentifier>{dde05c16-f550-4d23-bf22-06307dad92c0}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Исходные файлы\Composite">
       <UniqueIdentifier>{587a6638-ffa4-4f5e-931d-bcdc7067a568}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Исходные файлы\Composite\Composite">
-      <UniqueIdentifier>{84dcced9-40f9-49c3-8aa6-e643fbca2c46}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Исходные файлы\Canvas\Canvas">
-      <UniqueIdentifier>{c75ae0d7-a4c9-4245-bec8-41cf87741e3f}</UniqueIdentifier>
     </Filter>
     <Filter Include="Исходные файлы\Handler">
       <UniqueIdentifier>{b8d195d8-e154-4911-ac99-e034c7aa4d5e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Исходные файлы\Decorator">
-      <UniqueIdentifier>{52a43a82-3d74-467d-b15e-362d4c588088}</UniqueIdentifier>
+    <Filter Include="Файлы заголовков\Shape">
+      <UniqueIdentifier>{3fbb87fe-fb17-4cb5-aa7a-2f07e0e7af90}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Исходные файлы\Command\Invoker">
-      <UniqueIdentifier>{cdc93d31-e626-47d3-aedf-1525e27f248b}</UniqueIdentifier>
+    <Filter Include="Файлы заголовков\Decorator">
+      <UniqueIdentifier>{bd2ffe41-4ada-491d-bff1-75beccfaf4f5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Исходные файлы\Command\RectangleMini">
-      <UniqueIdentifier>{9657f9bc-599f-452b-b3b4-3899f5b47999}</UniqueIdentifier>
+    <Filter Include="Файлы заголовков\Handler">
+      <UniqueIdentifier>{d0c766bf-f0b6-4298-a99b-b237fa16f957}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Исходные файлы\Command\Toolbar">
-      <UniqueIdentifier>{393c26ec-cc48-4245-8af8-d80c317023ba}</UniqueIdentifier>
+    <Filter Include="Файлы заголовков\Canvas">
+      <UniqueIdentifier>{a5e448bf-8662-4d82-bf65-555b6a48e666}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Исходные файлы\Shape\Circle">
-      <UniqueIdentifier>{7ee4b2e8-1068-406b-9612-964ca36f8061}</UniqueIdentifier>
+    <Filter Include="Файлы заголовков\Composite">
+      <UniqueIdentifier>{8bfe23bd-5eac-4bfb-b294-b22289f4b4d8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Исходные файлы\Shape\Rectangle">
-      <UniqueIdentifier>{a3606397-3819-470d-baf1-e3e6f156326d}</UniqueIdentifier>
+    <Filter Include="Исходные файлы\States">
+      <UniqueIdentifier>{43a52661-d9e5-4061-b15d-4db0fe02fdf1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Исходные файлы\Shape\Triangle">
-      <UniqueIdentifier>{1c5d044f-d4a4-4e28-acf0-aa4021a6ccf1}</UniqueIdentifier>
+    <Filter Include="Исходные файлы\Commands">
+      <UniqueIdentifier>{9b7f8b87-bf41-4d7f-8177-996151fef355}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Исходные файлы\State\MoveState">
-      <UniqueIdentifier>{20ea14d0-424d-4d67-87e1-bab2b30dba95}</UniqueIdentifier>
+    <Filter Include="Файлы заголовков\Commands">
+      <UniqueIdentifier>{c7476fe0-eda4-48fd-ad99-d46c8ce59c3b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Исходные файлы\State\AddState">
-      <UniqueIdentifier>{47aab318-1575-4631-8117-8ff8d0d9d43d}</UniqueIdentifier>
+    <Filter Include="Исходные файлы\Toolbar">
+      <UniqueIdentifier>{329a8e4d-db5a-45dd-94ce-deec0ab45e8f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Исходные файлы\State\FillState">
-      <UniqueIdentifier>{c1425342-09eb-413c-96bf-e43c689bc965}</UniqueIdentifier>
+    <Filter Include="Файлы заголовков\Toolbar">
+      <UniqueIdentifier>{38cb0661-731a-4ccf-9453-56329183a41c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\States">
+      <UniqueIdentifier>{c4378385-9db9-4c14-869a-2d2a81e38300}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Utils">
+      <UniqueIdentifier>{d9da97d5-5227-4934-81e7-06f7d846eeef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Utils">
+      <UniqueIdentifier>{35900167-3fcb-4599-8ab0-e4901c9721a3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CCircle.cpp">
-      <Filter>Исходные файлы\Shape\Circle</Filter>
-    </ClCompile>
-    <ClCompile Include="CRectangle.cpp">
-      <Filter>Исходные файлы\Shape\Rectangle</Filter>
-    </ClCompile>
-    <ClCompile Include="CTriangle.cpp">
-      <Filter>Исходные файлы\Shape\Triangle</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="CShapeHandler.cpp">
+    <ClCompile Include="Shape\CCircle.cpp">
+      <Filter>Исходные файлы\Shape</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape\CRectangle.cpp">
+      <Filter>Исходные файлы\Shape</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape\CTriangle.cpp">
+      <Filter>Исходные файлы\Shape</Filter>
+    </ClCompile>
+    <ClCompile Include="Handler\CShapeHandler.cpp">
       <Filter>Исходные файлы\Handler</Filter>
     </ClCompile>
-    <ClCompile Include="CToolbar.cpp">
-      <Filter>Исходные файлы\Command\Toolbar</Filter>
+    <ClCompile Include="Canvas\CCanvas.cpp">
+      <Filter>Исходные файлы\Canvas</Filter>
     </ClCompile>
-    <ClCompile Include="CRectangleMini.cpp">
-      <Filter>Исходные файлы\Command\RectangleMini</Filter>
+    <ClCompile Include="Composite\CComposite.cpp">
+      <Filter>Исходные файлы\Composite</Filter>
     </ClCompile>
-    <ClCompile Include="CInvoker.cpp">
-      <Filter>Исходные файлы\Command\Invoker</Filter>
+    <ClCompile Include="Toolbar\CToolbar.cpp">
+      <Filter>Исходные файлы\Toolbar</Filter>
     </ClCompile>
-    <ClCompile Include="CComposite.cpp">
-      <Filter>Исходные файлы\Composite\Composite</Filter>
+    <ClCompile Include="Commands\CFillGreenCommand.cpp">
+      <Filter>Исходные файлы\Commands</Filter>
     </ClCompile>
-    <ClCompile Include="CCanvas.cpp">
-      <Filter>Исходные файлы\Canvas\Canvas</Filter>
+    <ClCompile Include="Commands\CFillRedCommand.cpp">
+      <Filter>Исходные файлы\Commands</Filter>
     </ClCompile>
-    <ClCompile Include="CAddState.cpp">
-      <Filter>Исходные файлы\State\AddState</Filter>
+    <ClCompile Include="Commands\CFillYellowCommand.cpp">
+      <Filter>Исходные файлы\Commands</Filter>
     </ClCompile>
-    <ClCompile Include="CFillState.cpp">
-      <Filter>Исходные файлы\State\FillState</Filter>
+    <ClCompile Include="Commands\COutlineColorBlueCommand.cpp">
+      <Filter>Исходные файлы\Commands</Filter>
     </ClCompile>
-    <ClCompile Include="CContextState.cpp">
-      <Filter>Исходные файлы\State\Context</Filter>
+    <ClCompile Include="Commands\COutlineColorCyanCommand.cpp">
+      <Filter>Исходные файлы\Commands</Filter>
     </ClCompile>
-    <ClCompile Include="CMoveState.cpp">
-      <Filter>Исходные файлы\State\MoveState</Filter>
+    <ClCompile Include="Commands\COutlineColorMagentaCommand.cpp">
+      <Filter>Исходные файлы\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Commands\COutlineThicknessOneCommand.cpp">
+      <Filter>Исходные файлы\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Commands\COutlineThicknessTwoCommand.cpp">
+      <Filter>Исходные файлы\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\Utils.cpp">
+      <Filter>Исходные файлы\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Commands\CInvoker.cpp">
+      <Filter>Исходные файлы\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="States\CStateContext.cpp">
+      <Filter>Исходные файлы\States</Filter>
+    </ClCompile>
+    <ClCompile Include="States\CDragState.cpp">
+      <Filter>Исходные файлы\States</Filter>
+    </ClCompile>
+    <ClCompile Include="States\CAddState.cpp">
+      <Filter>Исходные файлы\States</Filter>
+    </ClCompile>
+    <ClCompile Include="States\CFillState.cpp">
+      <Filter>Исходные файлы\States</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ICanvas.h">
-      <Filter>Исходные файлы\Canvas</Filter>
-    </ClInclude>
-    <ClInclude Include="ICanvasDrawable.h">
-      <Filter>Исходные файлы\Canvas</Filter>
-    </ClInclude>
-    <ClInclude Include="CCircle.h">
-      <Filter>Исходные файлы\Shape\Circle</Filter>
-    </ClInclude>
     <ClInclude Include="Const.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="CRectangle.h">
-      <Filter>Исходные файлы\Shape\Rectangle</Filter>
+    <ClInclude Include="Shape\CCircle.h">
+      <Filter>Файлы заголовков\Shape</Filter>
     </ClInclude>
-    <ClInclude Include="CShapeDecorator.h">
-      <Filter>Исходные файлы\Decorator</Filter>
+    <ClInclude Include="Shape\CRectangle.h">
+      <Filter>Файлы заголовков\Shape</Filter>
     </ClInclude>
-    <ClInclude Include="CTriangle.h">
-      <Filter>Исходные файлы\Shape\Triangle</Filter>
+    <ClInclude Include="Shape\CTriangle.h">
+      <Filter>Файлы заголовков\Shape</Filter>
     </ClInclude>
-    <ClInclude Include="IShape.h">
-      <Filter>Исходные файлы\Shape</Filter>
+    <ClInclude Include="Decorator\CShapeDecorator.h">
+      <Filter>Файлы заголовков\Decorator</Filter>
     </ClInclude>
-    <ClInclude Include="IComponent.h">
-      <Filter>Исходные файлы\Composite</Filter>
+    <ClInclude Include="Handler\CShapeHandler.h">
+      <Filter>Файлы заголовков\Handler</Filter>
     </ClInclude>
-    <ClInclude Include="CShapeHandler.h">
-      <Filter>Исходные файлы\Handler</Filter>
+    <ClInclude Include="Canvas\CCanvas.h">
+      <Filter>Файлы заголовков\Canvas</Filter>
     </ClInclude>
-    <ClInclude Include="CToolbar.h">
-      <Filter>Исходные файлы\Command\Toolbar</Filter>
+    <ClInclude Include="Canvas\ICanvasDrawable.h">
+      <Filter>Файлы заголовков\Canvas</Filter>
     </ClInclude>
-    <ClInclude Include="CRectangleMini.h">
-      <Filter>Исходные файлы\Command\RectangleMini</Filter>
+    <ClInclude Include="Shape\IShape.h">
+      <Filter>Файлы заголовков\Shape</Filter>
     </ClInclude>
-    <ClInclude Include="CInvoker.h">
-      <Filter>Исходные файлы\Command\Invoker</Filter>
+    <ClInclude Include="Composite\CComposite.h">
+      <Filter>Файлы заголовков\Composite</Filter>
     </ClInclude>
-    <ClInclude Include="IState.h">
-      <Filter>Исходные файлы\State</Filter>
+    <ClInclude Include="Commands\ICommand.h">
+      <Filter>Файлы заголовков\Commands</Filter>
     </ClInclude>
-    <ClInclude Include="CComposite.h">
-      <Filter>Исходные файлы\Composite\Composite</Filter>
+    <ClInclude Include="Colors.h">
+      <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="CCanvas.h">
-      <Filter>Исходные файлы\Canvas\Canvas</Filter>
+    <ClInclude Include="Toolbar\CToolbar.h">
+      <Filter>Файлы заголовков\Toolbar</Filter>
     </ClInclude>
-    <ClInclude Include="IContext.h">
-      <Filter>Исходные файлы\State\Context</Filter>
+    <ClInclude Include="States\IState.h">
+      <Filter>Файлы заголовков\States</Filter>
     </ClInclude>
-    <ClInclude Include="CMoveState.h">
-      <Filter>Исходные файлы\State\MoveState</Filter>
+    <ClInclude Include="States\CAddState.h">
+      <Filter>Файлы заголовков\States</Filter>
     </ClInclude>
-    <ClInclude Include="CFillState.h">
-      <Filter>Исходные файлы\State\FillState</Filter>
+    <ClInclude Include="Commands\CFillGreenCommand.h">
+      <Filter>Файлы заголовков\Commands</Filter>
     </ClInclude>
-    <ClInclude Include="CAddState.h">
-      <Filter>Исходные файлы\State\AddState</Filter>
+    <ClInclude Include="Commands\CFillRedCommand.h">
+      <Filter>Файлы заголовков\Commands</Filter>
     </ClInclude>
-    <ClInclude Include="CContextState.h">
-      <Filter>Исходные файлы\State\Context</Filter>
+    <ClInclude Include="Commands\CFillYellowCommand.h">
+      <Filter>Файлы заголовков\Commands</Filter>
     </ClInclude>
-    <ClInclude Include="ICommand.h">
-      <Filter>Исходные файлы\Command</Filter>
+    <ClInclude Include="Commands\COutlineColorBlueCommand.h">
+      <Filter>Файлы заголовков\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands\COutlineColorCyanCommand.h">
+      <Filter>Файлы заголовков\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands\COutlineColorMagentaCommand.h">
+      <Filter>Файлы заголовков\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands\COutlineThicknessOneCommand.h">
+      <Filter>Файлы заголовков\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands\COutlineThicknessTwoCommand.h">
+      <Filter>Файлы заголовков\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="States\CDragState.h">
+      <Filter>Файлы заголовков\States</Filter>
+    </ClInclude>
+    <ClInclude Include="States\CFillState.h">
+      <Filter>Файлы заголовков\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Utils.h">
+      <Filter>Файлы заголовков\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands\CInvoker.h">
+      <Filter>Файлы заголовков\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="States\CStateContext.h">
+      <Filter>Файлы заголовков\States</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
