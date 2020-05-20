@@ -1,14 +1,13 @@
 #pragma once
-#include "CCanvas.h"
-#include "CCircle.h"
-#include "CRectangle.h"
-#include "CTriangle.h"
+#include "../Canvas/CCanvas.h"
+#include "../Shape/CCircle.h"
+#include "../Shape/CRectangle.h"
+#include "../Shape/CTriangle.h"
 
-class CShapeController
+class CShapeHandler
 {
 public:
-	CShapeController(std::istream& input, std::ostream& output);
-	~CShapeController() = default;
+	CShapeHandler(std::istream& input, std::ostream& output);
 
 	void ProcessingCommand();
 	void PrintShapeInfo();
@@ -22,5 +21,5 @@ private:
 	std::istream& m_input;
 	std::ostream& m_output;
 
-	std::vector<ShapePtr> m_shape;
+	std::vector<ShapePtr> m_shapes;
 };

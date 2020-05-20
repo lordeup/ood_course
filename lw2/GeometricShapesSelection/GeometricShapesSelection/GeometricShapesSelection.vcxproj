@@ -19,27 +19,28 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CCanvas.h" />
-    <ClInclude Include="CCircle.h" />
-    <ClInclude Include="CComposite.h" />
-    <ClInclude Include="IComponent.h" />
+    <ClInclude Include="Canvas\CCanvas.h" />
+    <ClInclude Include="Canvas\ICanvasDrawable.h" />
+    <ClInclude Include="Colors.h" />
+    <ClInclude Include="Composite\CComposite.h" />
     <ClInclude Include="Const.h" />
-    <ClInclude Include="CRectangle.h" />
-    <ClInclude Include="CShapeController.h" />
-    <ClInclude Include="CShapeDecorator.h" />
-    <ClInclude Include="CTriangle.h" />
-    <ClInclude Include="ICanvas.h" />
-    <ClInclude Include="ICanvasDrawable.h" />
-    <ClInclude Include="IShape.h" />
+    <ClInclude Include="Decorator\CShapeDecorator.h" />
+    <ClInclude Include="Handler\CShapeHandler.h" />
+    <ClInclude Include="Shape\CCircle.h" />
+    <ClInclude Include="Shape\CRectangle.h" />
+    <ClInclude Include="Shape\CTriangle.h" />
+    <ClInclude Include="Shape\IShape.h" />
+    <ClInclude Include="Utils\Utils.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CCanvas.cpp" />
-    <ClCompile Include="CCircle.cpp" />
-    <ClCompile Include="CComposite.cpp" />
-    <ClCompile Include="CRectangle.cpp" />
-    <ClCompile Include="CShapeController.cpp" />
-    <ClCompile Include="CTriangle.cpp" />
+    <ClCompile Include="Canvas\CCanvas.cpp" />
+    <ClCompile Include="Composite\CComposite.cpp" />
+    <ClCompile Include="Handler\CShapeHandler.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Shape\CCircle.cpp" />
+    <ClCompile Include="Shape\CRectangle.cpp" />
+    <ClCompile Include="Shape\CTriangle.cpp" />
+    <ClCompile Include="Utils\Utils.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

@@ -1,21 +1,28 @@
-﻿#include "CShapeController.h"
+﻿#include "./Handler/CShapeHandler.h"
 #include <fstream>
 #include <iostream>
 
 int main()
 {
-	std::ifstream fileInput(INPUT_FILE_NAME);
-
-	if (!fileInput.is_open())
+	try
 	{
-		std::cerr << ERROR_FILE_NOT_EXIST << std::endl;
-		return 1;
-	}
+		std::ifstream fileInput(INPUT_FILE_NAME);
 
-	CShapeController shapeController(fileInput, std::cout);
-	shapeController.ProcessingCommand();
-	shapeController.PrintShapeInfo();
-	shapeController.ShapeDisplay();
+		if (!fileInput.is_open())
+		{
+			std::cerr << ERROR_FILE_NOT_EXIST << std::endl;
+			return 1;
+		}
+
+		CShapeHandler shapeHandler(fileInput, std::cout);
+		shapeHandler.ProcessingCommand();
+		shapeHandler.ShapeDisplay();
+		shapeHandler.PrintShapeInfo();
+	}
+	catch (const std::exception& error)
+	{
+		std::cerr << error.what() << std::endl;
+	}
 
 	return 0;
 }

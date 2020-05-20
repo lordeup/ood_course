@@ -13,90 +13,102 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Исходные файлы\CCircle">
-      <UniqueIdentifier>{b8a1e9c2-a458-4da6-94f5-be4e8789da06}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Исходные файлы\CTriangle">
-      <UniqueIdentifier>{66931e85-5587-488d-888d-8ac3d6861b27}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Исходные файлы\Canvas">
-      <UniqueIdentifier>{fc659a2e-00d4-4a81-9b0d-4428f99d28c0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Исходные файлы\CShapeController">
-      <UniqueIdentifier>{20228687-3d58-49c0-971e-58c824b9b26a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Исходные файлы\CShapeDecorator">
-      <UniqueIdentifier>{ebbb6fb7-cf5b-4421-90e9-73896ceb14f9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Исходные файлы\IShape">
-      <UniqueIdentifier>{529bb96c-5a28-428d-a08d-cd99b8f3778c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Исходные файлы\CRectangle">
-      <UniqueIdentifier>{21408fe0-f01c-4ff9-94cf-0ca2a8d11cb1}</UniqueIdentifier>
+      <UniqueIdentifier>{96586888-6271-40c9-884a-4b7cc1dd76b8}</UniqueIdentifier>
     </Filter>
     <Filter Include="Исходные файлы\Composite">
-      <UniqueIdentifier>{76f5a48b-ddef-4496-a804-3161644f2706}</UniqueIdentifier>
+      <UniqueIdentifier>{5590a0ca-d964-4bc7-8416-deef6fbe6f51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Handler">
+      <UniqueIdentifier>{d631b99e-b558-40bd-9144-b04414384b57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Shape">
+      <UniqueIdentifier>{971aac72-e71e-40df-b145-4820893208aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Utils">
+      <UniqueIdentifier>{f4737d66-59da-4e68-bbed-525d70df2d66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Canvas">
+      <UniqueIdentifier>{bd5e3ff0-e741-43b4-b5b8-f083639cbde2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Composite">
+      <UniqueIdentifier>{6c1ab5a0-290c-4865-a458-0eed15b4360a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Decorator">
+      <UniqueIdentifier>{f4af3044-28cb-4aa2-9782-4e903a294869}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Handler">
+      <UniqueIdentifier>{8d53abed-f52b-4647-94b5-d81b01823dd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Shape">
+      <UniqueIdentifier>{baf3cb4e-232e-4890-a40a-58614a6347c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Utils">
+      <UniqueIdentifier>{57b61b62-bbc7-4f52-830b-f2131f7097e6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Const.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="CCircle.h">
-      <Filter>Исходные файлы\CCircle</Filter>
+    <ClInclude Include="Canvas\CCanvas.h">
+      <Filter>Файлы заголовков\Canvas</Filter>
     </ClInclude>
-    <ClInclude Include="CTriangle.h">
-      <Filter>Исходные файлы\CTriangle</Filter>
+    <ClInclude Include="Canvas\ICanvasDrawable.h">
+      <Filter>Файлы заголовков\Canvas</Filter>
     </ClInclude>
-    <ClInclude Include="CCanvas.h">
-      <Filter>Исходные файлы\Canvas</Filter>
+    <ClInclude Include="Composite\CComposite.h">
+      <Filter>Файлы заголовков\Composite</Filter>
     </ClInclude>
-    <ClInclude Include="ICanvas.h">
-      <Filter>Исходные файлы\Canvas</Filter>
+    <ClInclude Include="Decorator\CShapeDecorator.h">
+      <Filter>Файлы заголовков\Decorator</Filter>
     </ClInclude>
-    <ClInclude Include="ICanvasDrawable.h">
-      <Filter>Исходные файлы\Canvas</Filter>
+    <ClInclude Include="Handler\CShapeHandler.h">
+      <Filter>Файлы заголовков\Handler</Filter>
     </ClInclude>
-    <ClInclude Include="CShapeController.h">
-      <Filter>Исходные файлы\CShapeController</Filter>
+    <ClInclude Include="Utils\Utils.h">
+      <Filter>Файлы заголовков\Utils</Filter>
     </ClInclude>
-    <ClInclude Include="CShapeDecorator.h">
-      <Filter>Исходные файлы\CShapeDecorator</Filter>
+    <ClInclude Include="Shape\CCircle.h">
+      <Filter>Файлы заголовков\Shape</Filter>
     </ClInclude>
-    <ClInclude Include="IShape.h">
-      <Filter>Исходные файлы\IShape</Filter>
+    <ClInclude Include="Shape\CRectangle.h">
+      <Filter>Файлы заголовков\Shape</Filter>
     </ClInclude>
-    <ClInclude Include="CRectangle.h">
-      <Filter>Исходные файлы\CRectangle</Filter>
+    <ClInclude Include="Shape\CTriangle.h">
+      <Filter>Файлы заголовков\Shape</Filter>
     </ClInclude>
-    <ClInclude Include="CComposite.h">
-      <Filter>Исходные файлы\Composite</Filter>
+    <ClInclude Include="Shape\IShape.h">
+      <Filter>Файлы заголовков\Shape</Filter>
     </ClInclude>
-    <ClInclude Include="IComponent.h">
-      <Filter>Исходные файлы\Composite</Filter>
+    <ClInclude Include="Colors.h">
+      <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CCircle.cpp">
-      <Filter>Исходные файлы\CCircle</Filter>
-    </ClCompile>
-    <ClCompile Include="CTriangle.cpp">
-      <Filter>Исходные файлы\CTriangle</Filter>
-    </ClCompile>
-    <ClCompile Include="CCanvas.cpp">
+    <ClCompile Include="Canvas\CCanvas.cpp">
       <Filter>Исходные файлы\Canvas</Filter>
     </ClCompile>
-    <ClCompile Include="CShapeController.cpp">
-      <Filter>Исходные файлы\CShapeController</Filter>
+    <ClCompile Include="Composite\CComposite.cpp">
+      <Filter>Исходные файлы\Composite</Filter>
+    </ClCompile>
+    <ClCompile Include="Handler\CShapeHandler.cpp">
+      <Filter>Исходные файлы\Handler</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\Utils.cpp">
+      <Filter>Исходные файлы\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape\CCircle.cpp">
+      <Filter>Исходные файлы\Shape</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape\CRectangle.cpp">
+      <Filter>Исходные файлы\Shape</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape\CTriangle.cpp">
+      <Filter>Исходные файлы\Shape</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="CRectangle.cpp">
-      <Filter>Исходные файлы\CRectangle</Filter>
-    </ClCompile>
-    <ClCompile Include="CComposite.cpp">
-      <Filter>Исходные файлы\Composite</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
