@@ -153,7 +153,7 @@ void CCanvas::UngroupingShapes(std::vector<ShapePtr>& shapes, ShapePtr& shapeSel
 
 		if (it != shapes.end())
 		{
-			auto groupShapes = shape->GetShapes();
+			auto groupShapes = (*it)->GetShapes();
 
 			if (!groupShapes.empty())
 			{
